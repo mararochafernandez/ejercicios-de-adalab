@@ -4,4 +4,10 @@ body {
     color: rebeccapurple;
     background-color: mediumpurple;
     line-height: 1.5;
+    border: 5px solid black;
+}
+
+ul {
+    color: red;
+    border: 5px solid black;
 }

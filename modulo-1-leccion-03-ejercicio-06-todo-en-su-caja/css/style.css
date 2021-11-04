@@ -1,0 +1,20 @@
+.container {
+    border: 1px solid deeppink;
+}
+
+.col {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+}
+
+.container--1 {
+    height: 100px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.container--2 {
+    height: 200px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,53 @@
+:root {
+    --color-title: grey;
+    --color-text: green;
+    --background-header: #eaeaea;
+    --margin: 0;
+    --padding: 20px;
+}
+
+body {
+    margin: var(--margin);
+}
+
+header {
+    background-color: var(--background-header);
+    padding: var(--padding);
+}
+
+main {
+    padding: var(--padding);
+}
+
+p {
+    width: 50%;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.title {
+    color: var(--color-title);
+    margin: var(--margin);
+}
+
+.subtitle {
+    color: var(--color-title);
+    margin: var(--margin);
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+p a {
+    color: var(--color-text);
+}

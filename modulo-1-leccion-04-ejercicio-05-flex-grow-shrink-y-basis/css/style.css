@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    min-height: 10vh;
+    padding: 10px;
+    background-color: tan;
+}
+
+.main {
+    padding: 0 10px;
+    min-height: 80vh;
+    background-color: wheat;
+}
+
+.footer {
+    min-height: 10vh;
+    padding: 10px;
+    background-color: peru;
+}

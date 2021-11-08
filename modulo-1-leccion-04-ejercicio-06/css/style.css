@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    max-width: 960px;
+}
+
+.header {
+    min-width: 100vw;
+    text-align: center;
+    padding: 10px;
+    background-color: paleturquoise;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    background-color: skyblue;
+}
+
+.aside {
+    min-width: 15vw;
+    text-align: center;
+    padding: 10px;
+    background-color: thistle;
+    box-sizing: border-box;
+}
+
+.main {
+    min-width: 70vw;
+    padding: 0 10px;
+    background-color: mistyrose;
+    box-sizing: border-box;
+}
+
+.footer {
+    min-width: 100vw;
+    text-align: center;
+    padding: 10px;
+    background-color: paleturquoise;
+    box-sizing: border-box;
+}

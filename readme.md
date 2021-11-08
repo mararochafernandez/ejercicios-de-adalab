@@ -7,6 +7,8 @@ Ejercicios de los materiales del curso O
 1. Intro a la web
 2. Mi primera página web
 3. Modelo de caja y herramientas
+4. Flexbox
+5. Posicionamiento
 
 ## Comandos útiles
 

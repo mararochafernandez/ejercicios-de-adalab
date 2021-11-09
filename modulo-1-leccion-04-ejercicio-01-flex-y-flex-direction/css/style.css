@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-direction: row;
+    /* row -> eje horizontal 
+       column -> eje vertical */
+    background-color: cornflowerblue;
+}
+
+.item {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid midnightblue;
+    background-color: mistyrose;
+}

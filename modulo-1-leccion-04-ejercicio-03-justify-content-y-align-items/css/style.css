@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid mediumpurple;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.item {
+    border: 1px solid mediumpurple;
+    box-sizing: border-box;
+}

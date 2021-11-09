@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 86%;
+    max-width: 600px;
+    margin: 0 auto;
+}

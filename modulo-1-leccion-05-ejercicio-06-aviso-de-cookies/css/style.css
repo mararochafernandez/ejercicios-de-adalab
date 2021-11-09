@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.div-cookies {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}

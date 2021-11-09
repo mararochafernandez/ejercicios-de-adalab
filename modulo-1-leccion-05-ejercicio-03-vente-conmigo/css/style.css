@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: purple;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+}
+
+.main {
+    position: relative;
+    top: 100px;
+}

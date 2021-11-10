@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+}
+
+.header-logo {
+    height: 30px;
+    margin: 10px 20px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.header-menu {
+    font-size: 10pt;
+}
+
+.header-menu a {
+    color: white;
+    margin-right: 20px;
+}
+
+.main {
+    position: relative;
+    top: 50px;
+}
+
+.hero {
+    background: url('../images/premium_dancer.png') right bottom no-repeat #529cf1;
+    height: 700px;
+}
+
+.hero-button {
+    background-color: #26b758;
+}

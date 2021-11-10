@@ -10,6 +10,10 @@ Ejercicios de los materiales del curso O
 4. Flexbox
 5. Posicionamiento
 
+- Global
+
+1. Spotify
+
 ## Comandos útiles
 
 - Ctrl+K Ctrl+C

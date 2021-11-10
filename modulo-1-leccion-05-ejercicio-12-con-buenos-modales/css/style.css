@@ -20,37 +20,6 @@ ul {
     list-style: none;
 }
 
-.modal-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-item {
-    background-color: white;
-    color: black;
-    width: 250px;
-    text-align: center;
-    padding: 30px 15px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px black;
-}
-
-.modal-title {
-    margin-bottom: 20px;
-}
-
-.modal-text {
-    font-size: 8pt;
-    line-height: 12pt;
-    ;
-    margin-bottom: 20px;
-}
-
 .button {
     font-size: 10pt;
     padding: 5px 10px;
@@ -175,4 +144,36 @@ ul {
 
 .footer-menu a {
     color: gray;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-item {
+    background-color: white;
+    color: black;
+    width: 250px;
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modal-title {
+    margin-bottom: 20px;
+}
+
+.modal-text {
+    font-size: 8pt;
+    line-height: 12pt;
+    ;
+    margin-bottom: 20px;
 }

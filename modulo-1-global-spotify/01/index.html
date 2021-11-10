@@ -11,36 +11,83 @@
 
 <body>
     <header class="header">
-        <a href="#"><img class="header-logo" src="./images/logo.png" alt="Spotify" /></a>
-        <nav class="header-menu">
-            <ul>
-                <li><a href="#">Premium</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Descarga</a></li>
+        <a class="header-logo-link" href="#"><img class="header-logo-image" src="./images/logo.png" alt="Spotify" /></a>
+        <nav class="header-nav">
+            <ul class="header-menu">
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Premium</a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Ayuda</a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Descarga</a>
+                </li>
+            </ul>
+            <ul class="header-menu-login">
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Registrarse</a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Iniciar sesión</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="hero">
-            <h1>Prueba Premium gratis 3 meses</h1>
-            <p>
-                Escucha millones de canciones sin anuncios, a la carta y sin conexión.
-            </p>
-            <a class="hero-button" href="#">Ver planes</a>
-            <p>
-                Rigen términos y condiciones. Los tres meses gratis no están disponibles para usuarios que ya hayan probado Premium.
-            </p>
+            <section class="hero-content">
+                <h1 class="hero-title">Prueba Premium gratis 3 meses</h1>
+                <p class="hero-text">
+                    Escucha millones de canciones sin anuncios, a la carta y sin conexión.
+                </p>
+                <a class="hero-button" href="#">Ver planes</a>
+                <p class="hero-text-small">
+                    Rigen términos y condiciones. Los tres meses gratis no están disponibles para usuarios que ya hayan probado Premium.
+                </p>
+            </section>
         </section>
-        <section class="">
-            <h2>¿Por qué pasarte a Premium?</h2>
-            <article>
-                <img />
-                <h3></h3>
-                <p></p>
+        <section class="benefits">
+            <h2 class="benefit-title">¿Por qué pasarte a Premium?</h2>
+            <article class="benefit-article">
+                <img class="benefit-image" src="./images/benefit-1.png" />
+                <h3 class="benefit-name">Descargar música.</h3>
+                <p class="benefit-text">Llévala iempre contigo</p>
+            </article>
+            <article class="benefit-article">
+                <img class="benefit-image" src="./images/benefit-2.png" />
+                <h3 class="benefit-name">Sin anuncios.</h3>
+                <p class="benefit-text">Disfruta de música sin interrupciones.</p>
+            </article>
+            <article class="benefit-article">
+                <img class="benefit-image" src="./images/benefit-3.png" />
+                <h3 class="benefit-name">Escucha lo que quieras.</h3>
+                <p class="benefit-text">Incluso en el móvil.</p>
+            </article>
+            <article class="benefit-article">
+                <img class="benefit-image" src="./images/benefit-4.png" />
+                <h3 class="benefit-name">Salta todas las canciones que quieras.</h3>
+                <p class="benefit-text">Simplemente dale a siguiente.</p>
             </article>
         </section>
     </main>
-    <footer></footer>
-</body>
-
+    <footer class="footer">
+        <section class="language"></section>
+        <section class="copyright"></section>
+        <nav class="footer-nav">
+            <ul class="footer-menu">
+                <li class="footer-menu-item">
+                    <a class="footer-menu-link" href="#">Legal</a>
+                </li>
+                <li class="footer-menu-item">
+                    <a class="footer-menu-link" href="#">Cookies</a>
+                </li>
+                <li class="footer-menu-item">
+                    <a class="footer-menu-link" href="#">Información sobre los anuncios</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>

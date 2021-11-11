@@ -25,6 +25,7 @@ Ctrl+Shift+P -> Wrap with Abbreviation
 ## Comandos de Git
 
 ```
+git pull
 git add -A
 git commit -m "Message commit"
 git push

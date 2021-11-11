@@ -15,12 +15,14 @@ Ejercicios de los materiales del curso O
 
 1. Spotify
 
-## Comandos útiles
+## Atajos de teclado
 
-- Ctrl+K Ctrl+C
-- Ctrl+Shift+P -> Wrap with Abbreviation
+```
+Ctrl+K Ctrl+C
+Ctrl+Shift+P -> Wrap with Abbreviation
+```
 
-## Git
+## Comandos de Git
 
 ```
 git add -A

@@ -9,6 +9,7 @@ Ejercicios de los materiales del curso O
 3. Modelo de caja y herramientas
 4. Flexbox
 5. Posicionamiento
+6. Diseño responsive
 
 - Global
 
@@ -18,3 +19,9 @@ Ejercicios de los materiales del curso O
 
 - Ctrl+K Ctrl+C
 - Ctrl+Shift+P -> Wrap with Abbreviation
+
+## Git
+
+<code>git add -A
+git commit -m "Message commit"
+git push</code>

@@ -22,8 +22,6 @@ Ejercicios de los materiales del curso O
 
 ## Git
 
-`git add -A
-
-git commit -m "Message commit"
-
-git push`
+`git add -A`
+`git commit -m "Message commit"`
+`git push`

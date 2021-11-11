@@ -23,5 +23,7 @@ Ejercicios de los materiales del curso O
 ## Git
 
 <code>git add -A
+
 git commit -m "Message commit"
+
 git push</code>

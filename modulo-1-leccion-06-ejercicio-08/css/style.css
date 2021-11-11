@@ -1,0 +1,52 @@
+body {
+    background-color: red;
+}
+
+.main {
+    margin: 0 20px;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media all and (min-width: 480px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        background-color: green;
+    }
+    .main {
+        margin: 30px 40px 0 40px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media all and (min-width: 1140px) {
+    .main {
+        margin: 190px auto 0 auto;
+        max-width: 750px;
+    }
+    .title {
+        font-size: 42px;
+    }
+    .text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

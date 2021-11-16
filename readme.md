@@ -39,6 +39,7 @@ git checkout nombre-rama
 git checkout -b nombre-rama
 git push -u origin nombre-rama
 git push origin nombre-rama
+git merge nombre-rama
 ```
 
 ```

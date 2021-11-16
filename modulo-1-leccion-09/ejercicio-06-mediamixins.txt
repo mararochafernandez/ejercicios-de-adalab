@@ -1,0 +1,15 @@
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+}
+@mixin desktop {
+    @media (min-width: 1024px) { @content; }
+}
+.title {
+    font-size: 16px;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-size: 20px;
+    }
+}

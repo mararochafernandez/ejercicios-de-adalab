@@ -13,6 +13,7 @@ Ejercicios de los materiales del curso O
 7. Control de versiones
 8. Automatización de tareas
 9. SASS
+10. Formularios
 
 ## Atajos de teclado
 
@@ -29,6 +30,7 @@ git pull
 git add -A
 git add nombre-archivo
 git commit -m "Message commit"
+git commit --amend
 git push
 ```
 
@@ -46,4 +48,12 @@ git merge nombre-rama
 git log (q)
 git revert codigo-commit
 git remote -v
+```
+
+## Comandos de NPM
+
+```
+npm install
+npm start
+npm run docs
 ```

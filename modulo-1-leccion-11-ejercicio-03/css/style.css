@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 60vh 20vh;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+.header {
+    grid-column: span 12;
+    background-color: lightpink;
+}
+
+.nav {
+    grid-column: span 3;
+    background-color: indigo;
+}
+
+.main {
+    grid-column: span 9;
+    background-color: indianred;
+}
+
+.footer {
+    grid-column: span 12;
+    background-color: lightblue;
+}

@@ -1,0 +1,9 @@
+.button {
+  background: #8a8a8a;
+  border-radius: 30px;
+  transition: background ease 1s, border-radius ease 1s;
+}
+.button:hover {
+  background: #6b8f1a;
+  border-radius: 5px;
+}

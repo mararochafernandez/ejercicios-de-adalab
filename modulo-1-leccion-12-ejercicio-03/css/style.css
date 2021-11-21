@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.page {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 250vh;
+}
+
+.page:hover {
+    height: 100vh;
+    transition: height ease 1s;
+}
+
+.box {
+    width: 250px;
+    height: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-image: url('../img/cat.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: 200px;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: coral;
+}
+
+.box:active {
+    padding-bottom: 50px;
+    background-position-y: bottom;
+    background-color: mediumpurple;
+    transition: padding-bottom ease 500ms, background-position-y ease 500ms;
+}
+
+.box:active .meow {
+    display: block;
+}
+
+.box .meow,
+.box:active .hello {
+    display: none;
+}

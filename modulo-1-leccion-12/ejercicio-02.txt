@@ -1,3 +1,0 @@
-.box {
-  transition: background ease 5s, box-shadow ease 1s;
-}

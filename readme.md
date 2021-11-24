@@ -51,6 +51,10 @@ git revert codigo-commit
 git remote -v
 ```
 
+```
+git branch -d nombre-rama
+git push origin --delete nombre-rama
+```
 ## Comandos de NPM
 
 ```

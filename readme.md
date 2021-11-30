@@ -3,7 +3,7 @@
 Ejercicios de los materiales del curso O
 
 - Módulo 1: HTML Y CSS
-
+MAQUETACIÓN:
 1. Intro a la web
 2. Mi primera página web
 3. Modelo de caja y herramientas
@@ -15,6 +15,12 @@ Ejercicios de los materiales del curso O
 9. SASS
 10. Formularios
 11. Sistema de Grid
+12. Animaciones CSS
+
+- Módulo 2: PROGRAMANDO LA WEB
+JAVASCRIPT:
+1. Intro a la programación
+2. Intro a la programación 2
 
 ## Atajos de teclado
 

@@ -1,0 +1,17 @@
+.success {
+    border: 2px solid seagreen;
+    background-color: mediumaquamarine;
+    color: seagreen;
+}
+
+.error {
+    border: 2px solid maroon;
+    background-color: tomato;
+    color: maroon;
+}
+
+.warning {
+    border: 2px solid chocolate;
+    background-color: sandybrown;
+    color: chocolate
+}

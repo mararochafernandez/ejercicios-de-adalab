@@ -21,6 +21,7 @@ MAQUETACIÓN:
 JAVASCRIPT:
 1. Intro a la programación
 2. Intro a la programación 2
+3. Condicionales
 
 ## Atajos de teclado
 
@@ -61,6 +62,7 @@ git remote -v
 git branch -d nombre-rama
 git push origin --delete nombre-rama
 ```
+
 ## Comandos de NPM
 
 ```

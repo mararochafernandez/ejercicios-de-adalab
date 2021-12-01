@@ -17,5 +17,4 @@ switch (ingredient) {
         break;
     default:
         console.log('Nada en la nevera');
-        break;
 }

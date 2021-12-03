@@ -22,6 +22,7 @@ JAVASCRIPT:
 1. Intro a la programación
 2. Intro a la programación 2
 3. Condicionales
+4. Funciones
 
 ## Atajos de teclado
 

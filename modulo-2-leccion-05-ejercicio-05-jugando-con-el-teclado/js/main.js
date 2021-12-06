@@ -10,17 +10,15 @@ const bodyElement = document.querySelector('.body');
 // cambiar color de fondo de bodyElement según la tecla pulsada
 function changeBackgroundColor(event) {
 
-    // borrar clase .background--1 si bodyElement la contiene
+    // borrar clase .background--x si bodyElement la contiene
     if (bodyElement.classList.contains('background--1')) {
         bodyElement.classList.remove('background--1');
     }
-
-    // borrar clase .background--2 si bodyElement la contiene
     if (bodyElement.classList.contains('background--2')) {
         bodyElement.classList.remove('background--2');
     }
 
-    // cambiar color
+    // añadir clase .background--x según la tecla pulsada
     switch (event.key) {
         case 'r':
             bodyElement.classList.add('background--1');
@@ -32,4 +30,4 @@ function changeBackgroundColor(event) {
 }
 
 // escuchar y gestionar evento keydown
-bodyElement.addEventListener('keydown', changeBackgroundColor);
+document.addEventListener('keydown', changeBackgroundColor);

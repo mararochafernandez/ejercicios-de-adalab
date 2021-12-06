@@ -32,9 +32,12 @@ function changeBackgroundColor() {
     if (bodyElement.classList.contains('background--4')) {
         bodyElement.classList.remove('background--4');
     }
+    if (bodyElement.classList.contains('background--5')) {
+        bodyElement.classList.remove('background--5');
+    }
 
-    // cambiar color
-    if (windowScroll > 0 && windowScroll < 250) {
+    // añadir clase .background--x según la posición del scroll vertical
+    if (windowScroll >= 0 && windowScroll < 250) {
         bodyElement.classList.add('background--1');
     } else if (windowScroll >= 250 && windowScroll < 500) {
         bodyElement.classList.add('background--2');
@@ -42,6 +45,8 @@ function changeBackgroundColor() {
         bodyElement.classList.add('background--3');
     } else if (windowScroll >= 750 && windowScroll < 1000) {
         bodyElement.classList.add('background--4');
+    } else if (windowScroll >= 1000) {
+        bodyElement.classList.add('background--5');
     }
 }
 

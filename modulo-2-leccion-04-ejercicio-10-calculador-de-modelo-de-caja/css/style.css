@@ -1,4 +1,4 @@
-.border-box {
+.box-a {
     box-sizing: border-box;
     background-color: cornflowerblue;
     border: 2px solid blue;
@@ -8,7 +8,7 @@
     margin: 10px;
 }
 
-.content-box {
+.box-b {
     box-sizing: content-box;
     background-color: burlywood;
     border: 5px solid darkgoldenrod;

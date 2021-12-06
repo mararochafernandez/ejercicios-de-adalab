@@ -2,9 +2,10 @@
 
 Ejercicios de los materiales del curso O
 
-- **Módulo 1: HTML Y CSS**
+**Módulo 1: HTML Y CSS**
 
-MAQUETACIÓN:
+- MAQUETACIÓN:
+
 1. Intro a la web
 2. Mi primera página web
 3. Modelo de caja y herramientas
@@ -18,9 +19,10 @@ MAQUETACIÓN:
 11. Sistema de Grid
 12. Animaciones CSS
 
-- **Módulo 2: PROGRAMANDO LA WEB**
+**Módulo 2: PROGRAMANDO LA WEB**
 
-JAVASCRIPT:
+- JAVASCRIPT:
+
 1. Intro a la programación
 2. Intro a la programación 2
 3. Condicionales

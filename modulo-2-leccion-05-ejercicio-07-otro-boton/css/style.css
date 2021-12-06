@@ -1,0 +1,14 @@
+.button {
+    background-color: cornflowerblue;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button--tomato {
+    background-color: tomato;
+}

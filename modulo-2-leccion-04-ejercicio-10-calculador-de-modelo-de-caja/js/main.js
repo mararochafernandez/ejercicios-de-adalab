@@ -1,13 +1,5 @@
 'use strict';
 
-// Caja A: tipo border-box, ancho 50px, padding 10px y borde 2px
-const boxA = boxModelCalculator(true, 50, 10, 2);
-console.log(boxA);
-
-// Caja B: tipo content-box, ancho 100px, padding 5px y borde 5px
-const boxB = boxModelCalculator(false, 100, 5, 5);
-console.log(boxB);
-
 // función para calcular anchos según modelo de caja
 function boxModelCalculator(borderBox, width, padding, borderWidth) {
     // dos formas de calcular ancho del contenido y ancho total de la caja
@@ -32,6 +24,14 @@ function boxModelCalculator(borderBox, width, padding, borderWidth) {
     // devolver resultado en cadena de texto
     return `El ancho del contenido es: ${contentWidth} y el ancho total de la caja es: ${totalWidth}.`;
 }
+
+// Caja A: tipo border-box, ancho 50px, padding 10px y borde 2px
+const boxA = boxModelCalculator(true, 50, 10, 2);
+console.log(boxA);
+
+// Caja B: tipo content-box, ancho 100px, padding 5px y borde 5px
+const boxB = boxModelCalculator(false, 100, 5, 5);
+console.log(boxB);
 
 /***/
 

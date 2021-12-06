@@ -1,0 +1,19 @@
+.border-box {
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    border: 2px solid blue;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.content-box {
+    box-sizing: content-box;
+    background-color: burlywood;
+    border: 5px solid darkgoldenrod;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

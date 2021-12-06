@@ -1,7 +1,7 @@
 'use strict';
 
-/* EJERCICIO 7 
-
+// EJERCICIO 7 
+/*
 const textEl = getEl('.text').innerHTML;
 const num = parseInt(textEl);
 
@@ -21,10 +21,12 @@ if (par(num) === true) {
     console.log('Este número es PAR: ' + num);
 } else {
     console.log('Este número es IMPAR: ' + num);
-} */
+}
+*/
 
+/***/
 
-/* ARROW FUNCTIONS */
+// Transformar el ejercicio anterior usando funciones arrow
 
 // obtener elemento html
 const getElement = selector => document.querySelector(selector);

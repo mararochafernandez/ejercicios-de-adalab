@@ -3,6 +3,7 @@
 Ejercicios de los materiales del curso O
 
 - **Módulo 1: HTML Y CSS**
+
 MAQUETACIÓN:
 1. Intro a la web
 2. Mi primera página web
@@ -18,11 +19,13 @@ MAQUETACIÓN:
 12. Animaciones CSS
 
 - **Módulo 2: PROGRAMANDO LA WEB**
+
 JAVASCRIPT:
 1. Intro a la programación
 2. Intro a la programación 2
 3. Condicionales
 4. Funciones
+5. Eventos
 
 ## Atajos de teclado
 

@@ -32,13 +32,13 @@ if (par(num) === true) {
 const getElement = selector => document.querySelector(selector);
 
 // obtener contenido del elemento html 
-const textElement = getElement('.text').innerHTML;
+const text = getElement('.text').innerHTML;
 
 // convertir en número
-const numElement = parseInt(textElement);
+const number = parseInt(text);
 
 // averiguar si es par o impar
 const par = num => num % 2 ? false : true;
 
 // imprimir resultado en pantalla
-console.log(par(numElement) ? `Este número es PAR: ${numElement}` : `Este número es IMPAR: ${numElement}`);
+console.log(par(number) ? `Este número es PAR: ${number}` : `Este número es IMPAR: ${number}`);

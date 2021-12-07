@@ -28,6 +28,7 @@ Ejercicios de los materiales del curso O
 3. Condicionales
 4. Funciones
 5. Eventos
+6. Objetos
 
 ## Atajos de teclado
 

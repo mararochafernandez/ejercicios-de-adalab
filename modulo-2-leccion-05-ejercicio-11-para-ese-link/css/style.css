@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: darkkhaki;
+}
+
+.list {
+    list-style: none;
+    padding: 10px 40px;
+}
+
+.item {
+    padding: 5px 0;
+}
+
+.link {
+    color: black;
+}
+
+.section {
+    padding: 10px 40px;
+}
+
+.section--1 {
+    background-color: papayawhip;
+}
+
+.section--2 {
+    background-color: powderblue;
+}
+
+.section--3 {
+    background-color: silver;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.text {
+    font-size: 32px;
+}

@@ -17,16 +17,16 @@ const eternalSunshineOfTheSM = 'Eternal sunshine of the spotless mind';
 const blueVelvet = 'Blue velvet';
 const split = 'Split';
 
-// obtener elemento html con la clase .button
+// obtener elemento html <button> con clase .button
 const buttonElement = document.querySelector('.button');
 
-// escuchar y gestionar evento click
+// escuchar y manejar evento click
 buttonElement.addEventListener('click', displayList);
 
 // mostrar lista de películas
 function displayList() {
 
-    // obtener elemento html con la clase .list
+    // obtener elemento html <ul> con clase .list
     const listElement = document.querySelector('.list');
 
     // si la lista está vacía...
@@ -40,7 +40,7 @@ function displayList() {
         const item5 = `<li class="item"><span class="item--5">${split}</span></li>`;
         listElement.innerHTML = item1 + item2 + item3 + item4 + item5;
 
-        // obtener elementos html de la lista
+        // obtener elementos html <li> con clase .item--x
         const item1Element = document.querySelector('.item--1');
         const item2Element = document.querySelector('.item--2');
         const item3Element = document.querySelector('.item--3');
@@ -54,11 +54,13 @@ function displayList() {
         item4Element.addEventListener('click', printItem);
         item5Element.addEventListener('click', printItem);
 
-        // imprimir en consola el valor del elemento de la lista
+        // imprimir en consola el contenido de los elementos de la lista
         function printItem(event) {
             console.log(event.currentTarget.innerHTML)
         }
     } else {
+
+        // borrar elementos de la lista
         listElement.innerHTML = '';
     }
 }

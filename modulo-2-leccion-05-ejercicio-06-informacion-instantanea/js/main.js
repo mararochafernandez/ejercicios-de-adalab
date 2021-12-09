@@ -11,10 +11,10 @@ const inputElement = document.querySelector('.input');
 // obtener elemento html con clase .text
 const textElement = document.querySelector('.text');
 
-// escuchar y gestionar evento keydown
-inputElement.addEventListener('keydown', writeInTextElement);
+// escuchar y gestionar evento keyup (o input)
+inputElement.addEventListener('keyup', writeInTextElement);
 
 // escribir en textElement el valor introducido en inputElement
 function writeInTextElement(event) {
-    textElement.innerHTML = event.currentTarget.value + event.key;
+    textElement.innerHTML = event.currentTarget.value;
 }

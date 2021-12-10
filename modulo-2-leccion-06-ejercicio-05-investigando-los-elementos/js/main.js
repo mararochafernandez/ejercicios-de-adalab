@@ -13,19 +13,19 @@ const buttonElement = document.querySelector('.button');
 buttonElement.addEventListener('click', handlerButtonClick);
 
 function handlerButtonClick() {
-    const inputElement = document.querySelector('.input');
-    if (inputElement.value) {
-        // console.log
-        console.log(inputElement);
-        console.log(inputElement.value);
-        console.log(inputElement.nodeName);
-        console.log(inputElement.required);
-        // console.dir
-        console.dir(inputElement);
-        console.dir(inputElement.value);
-        console.dir(inputElement.nodeName);
-        console.dir(inputElement.required);
-    } else {
-        console.error('Input vacío');
-    }
+  const inputElement = document.querySelector('.input');
+  if (inputElement.value) {
+    // console.log
+    console.log(inputElement);
+    console.log(inputElement.value);
+    console.log(inputElement.nodeName);
+    console.log(inputElement.required);
+    // console.dir
+    console.dir(inputElement);
+    console.dir(inputElement.value);
+    console.dir(inputElement.nodeName);
+    console.dir(inputElement.required);
+  } else {
+    console.error('Input vacío');
+  }
 }

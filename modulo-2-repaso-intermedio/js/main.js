@@ -23,25 +23,31 @@ buttonElement.addEventListener('click', handleclickButton);
 
 function handleclickButton(event) {
   event.preventDefault();
-  const randomNumber = changeStatus();
+
+  renderFace();
+
+  const randomNumber = getRandomIntInclusive(1, 100);
   console.log(`Número aleatorio: ${randomNumber}`);
+
   changeBackground(randomNumber);
 }
 
-// change text of .main__title and return random number
-function changeStatus() {
+// paint face
+function renderFace() {
+  const selectElement = getElement('.form__select');
   const titleElement = getElement('.main__title');
-  if (getElement('.form__select').value === ':)') {
+
+  if (selectElement.value === 'happy') {
     titleElement.innerHTML = ':)';
-  } else {
+  } else if (selectElement.value === 'sad') {
     titleElement.innerHTML = ':(';
   }
-  return getRandomIntInclusive(1, 100);
 }
 
-// change background color of .main according to random number
+// change background color according to random number
 function changeBackground(number) {
   const mainElement = getElement('.main');
+
   if (isEven(number)) {
     mainElement.classList.remove('main--fuego-chileno');
     mainElement.classList.add('main--amarillo-correcto');
@@ -49,5 +55,6 @@ function changeBackground(number) {
     mainElement.classList.remove('main--amarillo-correcto');
     mainElement.classList.add('main--fuego-chileno');
   }
+
   console.log(`Es par: ${isEven(number)}`);
 }

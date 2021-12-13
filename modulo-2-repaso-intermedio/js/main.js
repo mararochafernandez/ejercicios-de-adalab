@@ -18,14 +18,17 @@ function isEven(number) {
 }
 
 // event listener and handler
-getElement('.form__button').addEventListener('click', event => {
+const buttonElement = getElement('.form__button');
+buttonElement.addEventListener('click', handleclickButton);
+
+function handleclickButton(event) {
   event.preventDefault();
   const randomNumber = changeStatus();
   console.log(`Número aleatorio: ${randomNumber}`);
   changeBackground(randomNumber);
-});
+}
 
-// change text of .main__title
+// change text of .main__title amd return random number
 function changeStatus() {
   const titleElement = getElement('.main__title');
   if (getElement('.form__select').value === ':)') {
@@ -36,10 +39,9 @@ function changeStatus() {
   return getRandomIntInclusive(1, 100);
 }
 
-// change background color of .main
+// change background color of .main according to random number
 function changeBackground(number) {
   const mainElement = getElement('.main');
-  console.log(`Es par: ${isEven(number)}`);
   if (isEven(number)) {
     mainElement.classList.remove('main--fuego-chileno');
     mainElement.classList.add('main--amarillo-correcto');
@@ -47,4 +49,5 @@ function changeBackground(number) {
     mainElement.classList.remove('main--amarillo-correcto');
     mainElement.classList.add('main--fuego-chileno');
   }
+  console.log(`Es par: ${isEven(number)}`);
 }

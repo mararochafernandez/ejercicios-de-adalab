@@ -28,7 +28,7 @@ function handleclickButton(event) {
   changeBackground(randomNumber);
 }
 
-// change text of .main__title amd return random number
+// change text of .main__title and return random number
 function changeStatus() {
   const titleElement = getElement('.main__title');
   if (getElement('.form__select').value === ':)') {

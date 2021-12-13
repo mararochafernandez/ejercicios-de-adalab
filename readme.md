@@ -29,6 +29,7 @@ Ejercicios de los materiales del curso O
 4. Funciones
 5. Eventos
 6. Objetos
+7. Arrays y bucles
 
 ## Atajos de teclado
 

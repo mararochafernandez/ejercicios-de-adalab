@@ -30,6 +30,8 @@ Ejercicios de los materiales del curso O
 5. Eventos
 6. Objetos
 7. Arrays y bucles
+8. Trabajo colaborativo en Git
+9. Arrays y bucles 2
 
 ## Atajos de teclado
 

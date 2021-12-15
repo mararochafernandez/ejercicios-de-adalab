@@ -73,14 +73,12 @@ function renderTasks() {
 // función calcular tareas totales
 function calculateTotals() {
   completedTasks = 0;
-  incompleteTasks = 0;
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].completed) {
       completedTasks++;
-    } else {
-      incompleteTasks++;
     }
   }
+  incompleteTasks = tasks.length - completedTasks;
 }
 
 // función pintar tareas totales

@@ -70,29 +70,32 @@ function renderTasks() {
   return htmlTasks;
 }
 
-// función calcular tareas totales
-function calculateTotals() {
+// función calcular tareas completadas
+function calculateCompleted() {
   completedTasks = 0;
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].completed) {
       completedTasks++;
     }
   }
-  incompleteTasks = tasks.length - completedTasks;
 }
 
-// función pintar tareas totales
+// función pintar tareas totales, completadas e incompletas
 function renderTotals() {
   const textElement = document.querySelector('.js-text');
-  textElement.innerHTML = `Total de tareas: ${tasks.length} - Completadas: ${completedTasks} - Incompletas: ${incompleteTasks}`;
+  textElement.innerHTML = `Total de tareas: ${tasks.length} - Completadas: ${completedTasks} - Incompletas: ${tasks.length - completedTasks}`;
 }
 
 // función manejar evento checkbox
 function handleClickCheckbox(event) {
   const ckeckbox = event.currentTarget;
+  // tachar tarea (o no)
   ckeckbox.parentNode.classList.toggle('completed');
+  // marcar/descarmar checkbox
   tasks[ckeckbox.value].completed = ckeckbox.checked;
-  calculateTotals();
+  // calcular tareas completadas
+  calculateCompleted();
+  // pintar totales
   renderTotals();
 }
 
@@ -106,8 +109,8 @@ function listenCheckbox() {
 
 // pintar todas las tareas
 listElement.innerHTML = renderTasks();
-// calcular totales
-calculateTotals();
+// calcular tareas completadas
+calculateCompleted();
 // pintar totales
 renderTotals();
 // escuchar eventos checkbox

@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    row-gap: 5px;
+}
+
+.input {
+    margin-bottom: 10px;
+}

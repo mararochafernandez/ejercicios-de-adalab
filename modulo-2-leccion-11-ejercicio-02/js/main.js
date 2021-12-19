@@ -17,6 +17,7 @@ function getListOfPeople(name) {
   let results = '';
   resultElement.innerHTML = '';
 
+  // first fetch request
   fetch(`${url}/people/?search=${name}`)
     .then(response => response.json())
     .then(data => {
@@ -33,9 +34,10 @@ function getListOfPeople(name) {
             html += `<li>${result.name} - ${result.gender}</li>`;
           }
         } else {
-
-          const pages = data.count / 10;
+          const pages = Math.ceil(data.count / 10, 1);
           for (let page = 1; page <= pages; page++) {
+
+            // second fetch request
             fetch(`${url}/people/?search=${name}&page=${page}`)
               .then(pagesResponse => pagesResponse.json())
               .then(pagesData => {

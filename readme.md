@@ -32,6 +32,8 @@ Ejercicios de los materiales del curso O
 7. Arrays y bucles
 8. Trabajo colaborativo en Git
 9. Arrays y bucles 2
+10. Peticiones al servidor
+11. Peticiones al servidor 2
 
 ## Atajos de teclado
 

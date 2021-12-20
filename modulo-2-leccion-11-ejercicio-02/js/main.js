@@ -3,66 +3,80 @@
 /* EJERCICIO 2
 Ahora que conocemos mejor el API de Star Wars vamos a hacer una sencilla web usándolo. En la web aparece una caja de texto donde escribimos el nombre de un personaje (o parte del nombre) y un botón, al hacer click, nuestra web muestra debajo un listado con los personajes que coinciden con la búsqueda indicando su nombre y género. */
 
+
 // variables
-const url = 'https://swapi.py4e.com/api/';
+const baseURL = 'https://swapi.py4e.com/api/';
+let nextURL = null;
+let counter = 1;
+
 
 // get html elements
-const buttonElement = document.querySelector('.js-search');
-const nameElement = document.querySelector('.js-name');
-const resultElement = document.querySelector('.js-result');
+const searchButtonElement = document.querySelector('.js-search');
+const nameInputElement = document.querySelector('.js-name');
+const totalElement = document.querySelector('.js-total');
+const resultsElement = document.querySelector('.js-results');
+const paginationElement = document.querySelector('.js-pagination');
+
+
+// reset elements and counter
+function reset() {
+  totalElement.innerHTML = '';
+  resultsElement.innerHTML = '';
+  paginationElement.innerHTML = '';
+  counter = 1;
+}
+
 
 // get list of people searching by name
-function getListOfPeople(name) {
+function getListOfPeople(url) {
   let html = '';
-  let results = '';
-  resultElement.innerHTML = '';
 
-  // first fetch request
-  fetch(`${url}/people/?search=${name}`)
+  // fetch request
+  fetch(url)
     .then(response => response.json())
     .then(data => {
-      results = data.results;
-      html = `<p>Número de resultados: ${data.count}</p>`;
 
-      // check number of results
-      if (data.count !== 0) {
-        html += '<ol>';
-        if (data.count <= 10) {
-
-          // results of one page
-          for (const result of results) {
-            html += `<li>${result.name} - ${result.gender}</li>`;
-          }
-        } else {
-          const pages = Math.ceil(data.count / 10, 1);
-          for (let page = 1; page <= pages; page++) {
-
-            // second fetch request
-            fetch(`${url}/people/?search=${name}&page=${page}`)
-              .then(pagesResponse => pagesResponse.json())
-              .then(pagesData => {
-                results = pagesData.results;
-
-                // results of all pages
-                for (const result of results) {
-                  html += `<li>${result.name} - ${result.gender}</li>`;
-                }
-                resultElement.innerHTML = `${html}</ol>`;
-              });
-          }
-        }
+      // total
+      if (!data.previous) {
+        totalElement.innerHTML = `<p>Número de resultados: ${data.count}</p>`;
       }
-      resultElement.innerHTML = `${html}</ol>`;
+
+      // results
+      html += `<ol start="${counter}">`;
+      for (const result of data.results) {
+        counter++;
+        html += `<li>${result.name} - ${result.gender}</li>`;
+      }
+      html += '</ol>';
+      resultsElement.innerHTML += html;
+
+      // pagination
+      if (data.next) {
+        nextURL = data.next;
+        paginationElement.innerHTML = '<input class="js-load" type="submit" value="Cargar más" />';
+        const loadButtonElement = document.querySelector('.js-load');
+        loadButtonElement.addEventListener('click', handleClickLoadButton);
+      } else {
+        nextURL = null;
+        paginationElement.innerHTML = '';
+      }
     });
 }
 
-// listen and handle event
-function handleClickButton() {
-  if (nameElement.value) {
-    getListOfPeople(nameElement.value);
-  } else {
-    resultElement.innerHTML = '';
+
+// listen and handle events
+
+function handleClickLoadButton() {
+  if (nextURL) {
+    getListOfPeople(nextURL);
   }
 }
 
-buttonElement.addEventListener('click', handleClickButton);
+function handleClickSearchButton() {
+  reset();
+  if (nameInputElement.value) {
+    getListOfPeople(`${baseURL}/people/?search=${nameInputElement.value}`);
+  }
+}
+
+searchButtonElement.addEventListener('click', handleClickSearchButton);

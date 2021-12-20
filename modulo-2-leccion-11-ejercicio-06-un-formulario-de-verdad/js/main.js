@@ -7,10 +7,7 @@ Vamos a seguir trabajando sobre el ejercicio 4. El formulario nos ha quedado un 
 ¡A por ello! */
 
 // objeto
-const user = {
-  name: '',
-  lastName: ''
-};
+const user = {};
 
 // get html elements
 const inputElements = document.querySelectorAll('.js-input');

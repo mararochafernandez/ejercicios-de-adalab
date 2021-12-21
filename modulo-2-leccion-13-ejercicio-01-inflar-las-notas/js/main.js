@@ -9,3 +9,19 @@ const marks = [5, 4, 6, 7, 9];
 const inflatedMarks = marks.map(mark => mark + 1);
 
 console.log(inflatedMarks);
+
+
+/*
+// Otra forma de escribirlo:
+const getInflatedMarks = mark => mark + 1;
+const inflatedMarks = marks.map(getInflatedMarks);
+*/
+
+
+/*
+// Otra forma de escribirlo:
+function getInflatedMarks(mark) {
+  return mark + 1;
+}
+const inflatedMarks = marks.map(getInflatedMarks);
+*/

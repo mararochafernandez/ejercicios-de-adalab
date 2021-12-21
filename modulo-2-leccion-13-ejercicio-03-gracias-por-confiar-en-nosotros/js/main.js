@@ -23,3 +23,29 @@ const premiumUsers = users.map(user => {
 });
 
 console.log(premiumUsers);
+
+
+/*
+// Otra forma de escribirlo:
+const getPremiumUsers = user => {
+  let message = `Bienvenida, ${user.name}`;
+  if (user.isPremium === true) {
+    message += '. Gracias por confiar en nosotros.';
+  }
+  return message;
+};
+const premiumUsers = users.map(getPremiumUsers);
+*/
+
+
+/*
+// Otra forma de escribirlo:
+function getPremiumUsers(user) {
+  let message = `Bienvenida, ${user.name}`;
+  if (user.isPremium === true) {
+    message += '. Gracias por confiar en nosotros.';
+  }
+  return message;
+}
+const premiumUsers = users.map(getPremiumUsers);
+*/

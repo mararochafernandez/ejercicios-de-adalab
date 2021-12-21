@@ -34,6 +34,8 @@ Ejercicios de los materiales del curso O
 9. Arrays y bucles 2
 10. Peticiones al servidor
 11. Peticiones al servidor 2
+12. DOM avanzado
+13. Métodos funcionales de array
 
 ## Atajos de teclado
 

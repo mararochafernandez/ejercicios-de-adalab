@@ -9,3 +9,19 @@ const names = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
 const welcomeNames = names.map(name => `Bienvenida, ${name}`);
 
 console.log(welcomeNames);
+
+
+/*
+// Otra forma de escribirlo:
+const getWelcomeNames = name => `Bienvenida, ${name}`;
+const welcomeNames = names.map(getWelcomeNames);
+*/
+
+
+/*
+// Otra forma de escribirlo:
+function getWelcomeNames(name) {
+  return `Bienvenida, ${name}`;
+}
+const welcomeNames = names.map(getWelcomeNames);
+*/

@@ -31,6 +31,7 @@ const inputElements = document.querySelectorAll('.js-input');
 for (let i = 0; i < users.length; i++) {
   const newOption = document.createElement('option');
   const newContent = document.createTextNode(users[i].name);
+  console.log(newContent);
   newOption.value = users[i].name.toLowerCase();
   newOption.appendChild(newContent);
   selectElement.appendChild(newOption);

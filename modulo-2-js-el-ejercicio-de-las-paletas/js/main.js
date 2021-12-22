@@ -17,6 +17,20 @@
 const API_URL = 'https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palettes.json';
 
 
+// listen and handle click event of palettes
+function handleClickPalette(event) {
+  event.currentTarget.lastChild.classList.toggle('fas');
+  event.currentTarget.lastChild.classList.toggle('fa-heart');
+}
+
+function listenPalettes() {
+  const paletteElements = document.querySelectorAll('.palette__container');
+  for (const palette of paletteElements) {
+    palette.addEventListener('click', handleClickPalette);
+  }
+}
+
+
 // render palettes
 function renderPalettes(palettes) {
 
@@ -55,24 +69,18 @@ function renderPalettes(palettes) {
 }
 
 
-// listen and handle click event of palettes
-function handleClickPalette(event) {
-  event.currentTarget.lastChild.classList.toggle('fas');
-  event.currentTarget.lastChild.classList.toggle('fa-heart');
-}
-
-function listenPalettes() {
-  const paletteElements = document.querySelectorAll('.palette__container');
-  for (const palette of paletteElements) {
-    palette.addEventListener('click', handleClickPalette);
-  }
-}
-
-
 // listen and handle keyup event of search input
 function handleKeyupSearchInput(event) {
-  const searchTerm = event.currentTarget.value.toLowerCase();
-  getPalettes(API_URL, searchTerm);
+  const term = event.currentTarget.value.toLowerCase();
+
+  // filter palettes
+  const filteredPalettes = palettes.filter(palette => palette.name.toLowerCase().includes(term) || palette.from.toLowerCase().includes(term));
+
+  // render filtered palettes
+  renderPalettes(filteredPalettes);
+
+  // listen and handle palettes
+  listenPalettes();
 }
 
 function listenSearchInput() {
@@ -82,22 +90,19 @@ function listenSearchInput() {
 
 
 // get palettes data from api
-function getPalettes(url, term) {
+function getPalettes(url) {
 
   // fetch request
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      palettes = data.palettes;
 
-      // filter palettes
-      const filteredPalettes = data.palettes.filter(palette => palette.name.toLowerCase().includes(term) || palette.from.toLowerCase().includes(term));
+      // save data in local storage
+      localStorage.setItem('palettes', JSON.stringify(palettes));
 
       // render palettes
-      if (!term) {
-        renderPalettes(data.palettes);
-      } else {
-        renderPalettes(filteredPalettes);
-      }
+      renderPalettes(palettes);
 
       // listen and handle palettes
       listenPalettes();
@@ -105,9 +110,19 @@ function getPalettes(url, term) {
 }
 
 
+// query data in local storage
+let palettes = JSON.parse(localStorage.getItem('palettes'));
+
+if (!palettes) {
+  // get data from api
+  getPalettes(API_URL);
+} else {
+  // render palettes
+  renderPalettes(palettes);
+
+  // listen and handle palettes
+  listenPalettes();
+}
+
 // listen and handle search input
 listenSearchInput();
-
-
-// get palettes data from api
-getPalettes(API_URL);

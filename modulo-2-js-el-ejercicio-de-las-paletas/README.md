@@ -1,4 +1,5 @@
-### [Mara Rocha Fernández](https://github.com/mararochafernandez) ✨
+ [Mara Rocha Fernández](https://github.com/mararochafernandez) ✨
+
 ---
 
 # El ejericicio de las paletas

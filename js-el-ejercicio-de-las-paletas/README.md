@@ -10,7 +10,7 @@ Vamos a sacar a la diseñadora que llevamos dentro: queremos pintar paletas que 
 
 Esta vez tenemos una URL **https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palette.json** que nos devuelve datos de una paleta y tenemos que pintarla como en el ejemplo:
 
-![Propuesta de diseño](./assets/images/palette.png)
+![Propuesta de diseño](./images/palette.png)
 
 Pero hay uno requisito:
 

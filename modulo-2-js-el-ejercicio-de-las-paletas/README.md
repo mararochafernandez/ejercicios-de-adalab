@@ -1,3 +1,6 @@
+### [Mara Rocha Fernández](https://github.com/mararochafernandez) ✨
+---
+
 # El ejericicio de las paletas
 
 ## 1º Todo es color entre tú y tus arrays...

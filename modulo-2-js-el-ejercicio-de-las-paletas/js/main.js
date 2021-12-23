@@ -1,6 +1,9 @@
 'use strict';
 
 
+/*** VERSION WITH LOCAL STORAGE ***/
+
+
 /* SAMPLE PALETTE:
 <section class="palette">
   <p class="palette__title">Space Ship</p>

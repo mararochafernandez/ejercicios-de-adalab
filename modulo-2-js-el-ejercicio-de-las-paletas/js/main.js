@@ -16,11 +16,22 @@
 
 const API_URL = 'https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palettes.json';
 
+//let fav = {};
 
 // listen and handle click event of palettes
 function handleClickPalette(event) {
+
+  // paint fav icon
   event.currentTarget.lastChild.classList.toggle('fas');
   event.currentTarget.lastChild.classList.toggle('fa-heart');
+
+  /* save fav in local storage
+  if (event.currentTarget.lastChild.classList.contains('fa-heart')) {
+    fav[event.currentTarget.id] = true;
+  } else {
+    fav[event.currentTarget.id] = false;
+  }
+  localStorage.setItem('fav', JSON.stringify(fav));*/
 }
 
 function listenPalettes() {
@@ -33,6 +44,9 @@ function listenPalettes() {
 
 // render palettes
 function renderPalettes(palettes) {
+
+  // query fav in local storage
+  //fav = JSON.parse(localStorage.getItem('fav'));
 
   // palettes html element <main>
   const palettesElement = document.querySelector('.palettes');
@@ -48,6 +62,7 @@ function renderPalettes(palettes) {
     // palette container <ul>
     const newContainer = document.createElement('ul');
     newContainer.className = 'palette__container';
+    newContainer.id = palette.id;
 
     for (const color of palette.colors) {
 
@@ -63,6 +78,11 @@ function renderPalettes(palettes) {
     newPalette.className = 'palette';
     newPalette.appendChild(newTitle);
     newPalette.appendChild(newContainer);
+
+    /* paint fav icon
+    if (fav[palette.id]) {
+      newPalette.lastChild.lastChild.className = 'palette__color fas fa-heart';
+    }*/
 
     palettesElement.appendChild(newPalette);
   }

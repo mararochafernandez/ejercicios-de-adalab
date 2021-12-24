@@ -25,6 +25,7 @@ let fav = {};
 
 // listen and handle click event of palettes
 function handleClickPalette(event) {
+  console.log(event.currentTarget);
 
   // paint fav icon
   event.currentTarget.lastChild.classList.toggle('fas');

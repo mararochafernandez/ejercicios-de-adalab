@@ -1,0 +1,146 @@
+/* main content styles */
+
+.main-content {
+    &__article {
+        padding: 30px 15px 45px;
+        @include tablet {
+            padding: 30px 40px 60px;
+        }
+        @include desktop {
+            padding: 60px 275px;
+        }
+    }
+    &__category {
+        color: $color-secondary-light;
+        font-size: 14px;
+        line-height: 30px;
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+    &__title {
+        @extend .main-title;
+        margin-bottom: 15px;
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+    &__text {
+        @extend .main-text;
+        color: $color-neutral;
+        margin-bottom: 30px;
+    }
+    /* go button styles */
+    &__button {
+        @extend .main-button;
+        display: inline-block;
+        color: $color-primary;
+        line-height: 41px;
+        padding: 0 23px;
+        background-color: $color-neutral-light;
+        border: 2px solid $color-primary;
+        @include tablet {
+            padding: 0 31px;
+        }
+        @include desktop {
+            padding: 0 66px;
+        }
+        &:hover {
+            @extend .main-transition;
+            color: $color-neutral-light;
+            background-color: $color-primary;
+        }
+    }
+}
+
+
+/* reasons to purchase styles */
+
+.reasons {
+    background-color: $color-secondary-lighter;
+    padding: 30px 15px 60px;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 30px 1fr 1fr 1fr 45px;
+    grid-row-gap: 45px;
+    text-align: center;
+    @include tablet {
+        padding: 30px 40px 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 45px 1fr 45px;
+        grid-column-gap: 30px;
+    }
+    @include desktop {
+        padding: 60px 85px;
+    }
+    &__title {
+        @extend .main-title;
+        @include tablet {
+            grid-column: span 3;
+        }
+        @include desktop {
+            margin: 0 190px;
+        }
+    }
+    &__article {
+        @include tablet {
+            margin-bottom: 15px;
+        }
+        &--first {
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+        }
+        &--second {
+            @include tablet {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+        }
+        &--third {
+            @include tablet {
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+        }
+    }
+    &__subtitle {
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 30px;
+        @include tablet {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+    }
+    &__text {
+        @extend .main-text;
+        width: 180px;
+        margin: 0 auto;
+        @include tablet {
+            width: auto;
+        }
+    }
+    /* more reasons button styles */
+    &__button {
+        @extend .main-button;
+        width: 184px;
+        margin: 0 auto;
+        color: $color-neutral-light;
+        line-height: 45px;
+        background-color: $color-primary;
+        @include tablet {
+            width: 210px;
+            grid-column: span 3;
+        }
+        @include desktop {
+            width: 255px;
+        }
+        &:hover {
+            @extend .main-transition;
+            color: $color-neutral-light;
+            background-color: $color-secondary;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+/* footer styles */
+
+.footer {
+    background-color: $color-secondary-dark;
+    padding: 45px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+        padding: 45px 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 30px;
+    }
+    @include desktop {
+        padding: 45px 370px;
+    }
+}
+
+
+/* footer menu and social media menu styles */
+
+.menu {
+    width: 100%;
+    &__container {
+        margin: 15px 0;
+        @include tablet {
+            margin: 0;
+        }
+    }
+    &__item {
+        text-align: center;
+        line-height: 30px;
+        text-transform: uppercase;
+        @include tablet {
+            text-align: left;
+        }
+    }
+    &__link {
+        color: $color-neutral-light;
+        padding: 5px 5px 5px 0;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    /* footer menu styles */
+    &__footer {
+        @include tablet {
+            order: 2;
+        }
+    }
+    /* social media menu styles */
+    &__socialmedia {
+        @include tablet {
+            order: 3;
+        }
+    }
+}
+
+
+/* copyright secction styles */
+
+.copyright {
+    width: 100%;
+    color: $color-neutral-light;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    @include tablet {
+        order: 1;
+        text-align: left;
+        margin-top: 0;
+    }
+}
+
+
+/* font awesome icon styles */
+
+.fa-heart {
+    color: $color-primary;
+    height: 15px;
+}

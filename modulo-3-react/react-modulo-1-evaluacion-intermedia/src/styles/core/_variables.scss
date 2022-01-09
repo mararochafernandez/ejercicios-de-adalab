@@ -1,0 +1,9 @@
+$menu-text-color: #4a4a4a;
+$background-color: #3cdbc0;
+$main-title-color: #fff;
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}

@@ -1,0 +1,17 @@
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color;
+  &__title {
+    font-size: 30px;
+    color: $main-title-color;
+    text-transform: capitalize;
+    text-align: center;
+    word-spacing: 100vw;
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+/* fonts */
+
+$font-primary: 'Roboto Slab',
+serif;
+$font-secondary: 'Roboto',
+sans-serif;
+
+/* colors */
+
+$color-primary: #f26002;
+$color-secondary: #0271bc;
+$color-secondary-light: #8ccbea;
+$color-secondary-lighter: #eff9ff;
+$color-secondary-dark: #304268;
+$color-neutral: #4a4a4a;
+$color-neutral-light: #fff;
+$color-neutral-dark: #000;
+
+/* media queries */
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+
+/* extend directive */
+
+.main-title {
+    font-family: $font-primary;
+    font-size: 24px;
+    line-height: 30px;
+    @include tablet {
+        font-size: 26px;
+        line-height: 45px;
+    }
+    @include desktop {
+        font-size: 32px;
+    }
+}
+
+.main-text {
+    font-size: 18px;
+    line-height: 30px;
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
+.main-button {
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 45px;
+}
+
+.main-transition {
+    transition: background-color ease .5s;
+}
+
+
+/* button animation */
+
+.button-animation {
+    animation: acordion 2s infinite linear;
+}
+
+$button-border: 10px;
+@keyframes acordion {
+    15% {
+        border-top-right-radius: $button-border;
+        border-bottom-right-radius: 50%;
+    }
+    30% {
+        border-top-right-radius: $button-border;
+        border-bottom-right-radius: $button-border;
+        border-bottom-left-radius: 50%;
+    }
+    45% {
+        border-top-right-radius: $button-border;
+        border-bottom-right-radius: $button-border;
+        border-bottom-left-radius: $button-border;
+        border-top-left-radius: 50%;
+    }
+    60% {
+        border-top-right-radius: $button-border;
+        border-bottom-right-radius: $button-border;
+        border-bottom-left-radius: $button-border;
+        border-top-left-radius: $button-border;
+    }
+}

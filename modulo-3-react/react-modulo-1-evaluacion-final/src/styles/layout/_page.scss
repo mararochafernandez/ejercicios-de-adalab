@@ -1,0 +1,55 @@
+body {
+  font-family: $font-secondary;
+  font-size: 16px;
+  color: $color-neutral-dark;
+}
+
+/* hero button and footer button styles */
+
+.button {
+  background-color: $color-neutral-light;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  &:hover {
+    background-color: $color-primary;
+    @extend .main-transition;
+  }
+  &__mask {
+    width: 45px;
+    height: 45px;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    background-color: $color-primary;
+    &:hover {
+      background-color: $color-neutral-light;
+    }
+  }
+  /* hero button styles */
+  &__hero &__mask {
+    mask-image: url('../../images/ico-scroll-down.svg');
+    margin-top: 3px;
+  }
+  /* footer button styles */
+  &__footer {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    &:hover {
+      @extend .button-animation;
+    }
+    &:active {
+      border-radius: $button-border;
+      animation: none;
+    }
+  }
+  &__footer &__mask {
+    mask-image: url('../../images/ico-arrow.svg');
+  }
+}

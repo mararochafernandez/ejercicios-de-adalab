@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color: white;
+  color: black;
+  padding: 20px 50px;
+  height: 100vh;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+}
+
+.darkmode {
+  filter: invert(1);
+}

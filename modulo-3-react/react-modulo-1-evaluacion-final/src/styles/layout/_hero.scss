@@ -1,0 +1,57 @@
+/* hero styles */
+
+.hero {
+  /* hero background styles */
+  background-image: url('../../images/cover.jpg');
+  background-size: cover;
+  background-position: center top;
+  &__image {
+    background: linear-gradient(to bottom, transparent 75%, black);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  /* hero article styles */
+  &__article {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color-neutral-light;
+    padding: 0 15px;
+    @include tablet {
+      padding: 0 40px;
+    }
+    @include desktop {
+      padding: 0 275px;
+    }
+  }
+  &__title {
+    font-family: $font-primary;
+    font-size: 42px;
+    line-height: 55px;
+    text-transform: uppercase;
+    word-spacing: 100vw;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    @include tablet {
+      font-size: 80px;
+      line-height: 106px;
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      font-size: 100px;
+      line-height: 132px;
+      margin-bottom: 0;
+    }
+  }
+  &__text {
+    margin-bottom: 45px;
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+}

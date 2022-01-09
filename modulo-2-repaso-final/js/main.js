@@ -1,1 +1,0 @@
-// API URL: https://beta.adalab.es/ejercicios-extra/api/eshop/v2/cart.json

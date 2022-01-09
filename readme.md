@@ -37,6 +37,11 @@ Ejercicios de los materiales del curso O
 12. DOM avanzado
 13. Métodos funcionales de array
 
+**Módulo 3: REACT**
+
+1. Mi primera web en React
+2. Eventos y estado
+
 ## Atajos de teclado
 
 ```
@@ -83,4 +88,17 @@ git push origin --delete nombre-rama
 npm install
 npm start
 npm run docs
+```
+
+## Comandos React
+
+```
+sudo npm install -g create-react-app
+create-react-app nombre-proyecto
+npm start (http://localhost:3000)
+```
+
+```
+create-react-app react-starter-kit
+npm install node-sass
 ```

@@ -25,7 +25,7 @@ const App = () => {
     // HTML ✨
 
     <div className="app">
-      {getTitle('El contador')}
+      {getTitle('Ejemplo: eventos y estado')}
 
       <h2>Generador de emails</h2>
 

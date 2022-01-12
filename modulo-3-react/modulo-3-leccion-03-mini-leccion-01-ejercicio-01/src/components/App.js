@@ -48,7 +48,9 @@ function App() {
     // HTML ✨
 
     <div className="app">
-      {getTitle('Selecciona los ingredientes de la tortilla de patatas')}
+      {getTitle('Eres un bot o una persona')}
+
+      <h2>Selecciona los ingredientes de la tortilla de patatas</h2>
 
       <input
         type="checkbox"

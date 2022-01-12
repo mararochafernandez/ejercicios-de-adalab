@@ -1,37 +1,39 @@
 import { useState } from 'react';
 
 const App = () => {
-  // Estados del componente
+  /* Let's do magic! 🦄🦄🦄 */
+
+  const getTitle = (text) => <h1>{text}</h1>;
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [region, setRegion] = useState('España peninsular'); // Iniciamos el componente con la primera opción del select
+  const [region, setRegion] = useState('España peninsular');
   const [paymentType, setPaymentType] = useState('');
   const [legalTerms, setLegalTerms] = useState(false);
 
-  // Eventos
-  const handleName = (ev) => {
-    setName(ev.target.value);
+  // event handlers
+
+  const handleName = (event) => {
+    setName(event.target.value);
   };
 
-  const handleEmail = (ev) => {
-    setEmail(ev.target.value);
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
   };
 
-  const handleRegion = (ev) => {
-    setRegion(ev.target.value);
+  const handleRegion = (event) => {
+    setRegion(event.target.value);
   };
 
-  const handlePaymentType = (ev) => {
-    setPaymentType(ev.target.value);
+  const handlePaymentType = (event) => {
+    setPaymentType(event.target.value);
   };
 
-  const handleLegalTerms = (ev) => {
-    // Como lo que nos interesa es si está activo o no guardamos el checked
-    setLegalTerms(ev.target.checked);
+  const handleLegalTerms = (event) => {
+    setLegalTerms(event.target.checked);
   };
 
   const handleResetButton = () => {
-    // Ponemos los mismo valores que hemos usado arriba en los useState
     setName('');
     setEmail('');
     setRegion('España peninsular');
@@ -39,12 +41,13 @@ const App = () => {
     setLegalTerms(false);
   };
 
-  const handleForm = (ev) => {
-    ev.preventDefault();
+  const handleForm = (event) => {
+    event.preventDefault();
     console.log('Enviando datos al servidor...');
   };
 
-  // Funciones que nos ayudan a renderizar
+  // render helpers
+
   const renderPaymentTypeText = () => {
     if (paymentType === 'creditCard') {
       return 'Tarjeta de crédito';
@@ -56,8 +59,6 @@ const App = () => {
   };
 
   const isValidForm = () => {
-    // El formulario solo es válido cuando los inputs de tipo texto no estén vacíos, cuando se haya marcado una tipo de pago y cuando los términos legales sean true
-    // También podríamos comprobar que el email tiene el formato correcto, pero no queremos complicar este ejemplo
     if (
       name !== '' &&
       email !== '' &&
@@ -71,16 +72,17 @@ const App = () => {
   };
 
   return (
+    // HTML ✨
+
     <div>
-      <form className="form" onSubmit={handleForm}>
+      {getTitle('Formularios controlados')}
+
+      <form onSubmit={handleForm}>
         <h2>Rellena tus datos para finalizar la compra:</h2>
-        <div className="form">
+        <div>
           {/* name */}
-          <label className="label-text" htmlFor="name">
-            Escribe un nombre:
-          </label>
+          <label htmlFor="name">Escribe un nombre:</label>
           <input
-            className="input-text"
             type="text"
             name="name"
             id="name"
@@ -90,11 +92,8 @@ const App = () => {
           />
 
           {/* email */}
-          <label className="label-text" htmlFor="email">
-            Escribe un email:
-          </label>
+          <label htmlFor="email">Escribe un email:</label>
           <input
-            className="input-text"
             type="email"
             name="email"
             id="email"
@@ -104,11 +103,8 @@ const App = () => {
           />
 
           {/* region */}
-          <label className="label-text" htmlFor="region">
-            Indica tu región:
-          </label>
+          <label htmlFor="region">Indica tu región:</label>
           <select
-            className="input-select"
             name="region"
             id="region"
             value={region}
@@ -122,13 +118,10 @@ const App = () => {
           </select>
 
           {/* payment type */}
-          <label className="label-text">Indica tu método de pago:</label>
+          <label>Indica tu método de pago:</label>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="creditCard">
-              Tarjeta de crédito
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea creditCard */}
+          <div>
+            <label htmlFor="creditCard">Tarjeta de crédito</label>
             <input
               type="radio"
               name="paymentType"
@@ -139,11 +132,8 @@ const App = () => {
             />
           </div>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cash">
-              Efectivo
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cash */}
+          <div>
+            <label htmlFor="cash">Efectivo</label>
             <input
               type="radio"
               name="paymentType"
@@ -154,11 +144,8 @@ const App = () => {
             />
           </div>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cashOnDelivery">
-              Contra reembolso
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cashOnDelivery */}
+          <div>
+            <label htmlFor="cashOnDelivery">Contra reembolso</label>
             <input
               type="radio"
               name="paymentType"
@@ -170,10 +157,9 @@ const App = () => {
           </div>
 
           {/* legal terms */}
-          <label className="label-check" htmlFor="legalTerms">
+          <label htmlFor="legalTerms">
             Debes aceptar nuestros términos legales para completar la compra:
           </label>
-          {/* Este radio solo debe aparecer activo cuando legalTerms sea true */}
           <input
             type="checkbox"
             name="legalTerms"
@@ -183,7 +169,7 @@ const App = () => {
           />
         </div>
 
-        <div className="preview">
+        <div>
           <h2>Tus datos son:</h2>
           <ul>
             <li>Nombre: {name}</li>
@@ -191,25 +177,21 @@ const App = () => {
             <li>Región: {region}</li>
             <li>Método de pago: {renderPaymentTypeText()}</li>
             <li>
-              Has aceptado nuestros términos legales:{' '}
+              Has aceptado nuestros términos legales:
               {legalTerms === true ? 'Sí' : 'No'}
             </li>
           </ul>
         </div>
 
         {/* reset */}
-        {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
         <input
-          className="button"
           type="submit"
           value="Enviar"
           disabled={isValidForm() === false}
         />
 
         {/* send */}
-        <button className="button reset" onClick={handleResetButton}>
-          Limpiar el formulario
-        </button>
+        <button onClick={handleResetButton}>Limpiar el formulario</button>
       </form>
     </div>
   );

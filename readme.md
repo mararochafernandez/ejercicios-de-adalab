@@ -42,6 +42,7 @@ Ejercicios de los materiales del curso O
 1. Mi primera web en React
 2. Eventos y estado
 3. Formularios
+4. Arrays y objetos
 
 ## Atajos de teclado
 
@@ -102,4 +103,8 @@ npm start (http://localhost:3000)
 ```
 create-react-app react-starter-kit
 npm install node-sass
+```
+
+```
+npm run githubpages
 ```

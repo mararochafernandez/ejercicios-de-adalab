@@ -1,4 +1,3 @@
-import '../styles/App.scss';
 import { useState } from 'react';
 
 function App() {
@@ -30,10 +29,10 @@ function App() {
   return (
     // HTML ✨
 
-    <div className="app">
-      {getTitle('Ejemplo: formularios')}
+    <div>
+      {getTitle('Formularios')}
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">Escribe un nombre:</label>
         <input
           type="name"

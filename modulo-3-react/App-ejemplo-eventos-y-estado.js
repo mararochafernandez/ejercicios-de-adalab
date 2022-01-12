@@ -1,4 +1,3 @@
-import '../styles/App.scss';
 import { useState } from 'react';
 
 const App = () => {
@@ -24,8 +23,8 @@ const App = () => {
   return (
     // HTML ✨
 
-    <div className="app">
-      {getTitle('Ejemplo: eventos y estado')}
+    <div>
+      {getTitle('Eventos y estado')}
 
       <h2>Generador de emails</h2>
 

@@ -13,6 +13,7 @@ function App() {
       completed: false,
     },
   ]);
+  const [term, setTerm] = useState('');
 
   const renderTitle = () => <h2>Mi lista de tareas</h2>;
 
@@ -22,24 +23,47 @@ function App() {
     setTasks([...tasks]);
   };
 
+  const handleSubmit = (event) => event.preventDefault();
+
+  const handleSearch = (event) => setTerm(event.target.value);
+
+  const searchTasks = () =>
+    tasks.filter((task) =>
+      task.task.toLowerCase().includes(term.toLowerCase())
+    );
+
   const renderTasks = () =>
-    tasks.map((task, index) => (
+    searchTasks().map((task, index) => (
       <li
         key={index}
         id={index}
-        onClick={handleTask}
         className={`task ${task.completed ? 'task--completed' : ''}`}
+        onClick={handleTask}
       >
         {task.task}
       </li>
     ));
+
+  const getTotalOfTasks = () => searchTasks().length;
+
+  const getCompletedTasks = () =>
+    searchTasks().filter((task) => task.completed).length;
+
+  const getIncompleteTasks = () => getTotalOfTasks() - getCompletedTasks();
 
   return (
     // HTML ✨
 
     <div>
       {renderTitle()}
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="term">Buscar:</label>
+        <input type="text" name="term" value={term} onChange={handleSearch} />
+      </form>
       <ol>{renderTasks()}</ol>
+      <p>Tareas totales: {getTotalOfTasks()}</p>
+      <p>Tareas completadas: {getCompletedTasks()}</p>
+      <p>Tareas pendientes: {getIncompleteTasks()}</p>
     </div>
   );
 }

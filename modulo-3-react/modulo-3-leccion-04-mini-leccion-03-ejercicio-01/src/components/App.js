@@ -13,6 +13,7 @@ function App() {
       completed: false,
     },
   ]);
+  const [term, setTerm] = useState('');
 
   const renderTitle = () => <h2>Mi lista de tareas</h2>;
 
@@ -22,23 +23,33 @@ function App() {
     setTasks([...tasks]);
   };
 
+  const handleSubmit = (event) => event.preventDefault();
+
+  const handleSearch = (event) => setTerm(event.target.value);
+
   const renderTasks = () =>
-    tasks.map((task, index) => (
-      <li
-        key={index}
-        id={index}
-        onClick={handleTask}
-        className={`task ${task.completed ? 'task--completed' : ''}`}
-      >
-        {task.task}
-      </li>
-    ));
+    tasks
+      .filter((task) => task.task.toLowerCase().includes(term.toLowerCase()))
+      .map((task, index) => (
+        <li
+          key={index}
+          id={index}
+          className={`task ${task.completed ? 'task--completed' : ''}`}
+          onClick={handleTask}
+        >
+          {task.task}
+        </li>
+      ));
 
   return (
     // HTML ✨
 
     <div>
       {renderTitle()}
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="term">Buscar:</label>
+        <input type="text" name="term" value={term} onChange={handleSearch} />
+      </form>
       <ol>{renderTasks()}</ol>
     </div>
   );

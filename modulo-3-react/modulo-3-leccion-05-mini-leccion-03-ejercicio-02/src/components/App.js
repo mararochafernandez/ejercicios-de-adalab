@@ -16,8 +16,8 @@ function App() {
       },
     ])
   );
-
   const [term, setTerm] = useState('');
+  const [newTaskInput, setNewTaskInput] = useState('');
 
   useEffect(() => {
     localStorage.set('tasks', tasks);
@@ -27,6 +27,21 @@ function App() {
     const clickedTaskId = event.target.id;
     tasks[clickedTaskId].completed = !tasks[clickedTaskId].completed;
     setTasks([...tasks]);
+  };
+
+  const handleNewTaskButton = () => {
+    if (newTaskInput) {
+      tasks.push({
+        task: newTaskInput,
+        completed: false,
+      });
+      setTasks([...tasks]);
+      setNewTaskInput('');
+    }
+  };
+
+  const handleNewTaskInput = (event) => {
+    setNewTaskInput(event.target.value);
   };
 
   const handleSearch = (event) => {
@@ -76,6 +91,19 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label htmlFor="term">Buscar:</label>
         <input type="text" name="term" value={term} onChange={handleSearch} />
+        <label htmlFor="term">Nueva tarea:</label>
+        <input
+          type="text"
+          name="newTaskInput"
+          value={newTaskInput}
+          onChange={handleNewTaskInput}
+        />
+        <input
+          type="submit"
+          name="newTaskButton"
+          value="Crear nueva tarea"
+          onClick={handleNewTaskButton}
+        />
       </form>
       <ol>{renderTasks()}</ol>
       <p>Tareas totales: {getTotalOfTasks()}</p>

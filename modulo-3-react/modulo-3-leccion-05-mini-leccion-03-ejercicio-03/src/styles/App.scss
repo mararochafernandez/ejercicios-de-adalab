@@ -1,0 +1,10 @@
+.task {
+  cursor: pointer;
+  &--completed {
+    text-decoration: line-through;
+  }
+}
+
+.fas.fa-times {
+  transform: translate(9px, 1px);
+}

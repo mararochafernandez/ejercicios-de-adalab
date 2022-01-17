@@ -1,0 +1,179 @@
+body {
+  font-family: $font-main;
+  font-size: 10px;
+}
+
+.page {
+  margin: 20px;
+  @include tablet {
+    margin: 40px;
+  }
+  @include desktop {
+    margin: 60px;
+  }
+}
+
+.header {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 4em;
+    color: $color-main;
+    border-bottom: 1px solid $grey-light;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    @include tablet {
+      display: block;
+      font-size: 4.8em;
+    }
+    @include desktop {
+      font-size: 5.6em;
+    }
+  }
+}
+
+.main {
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-size: 1.6em;
+  color: $grey-dark;
+  @include tablet {
+  }
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    border: none;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--large {
+      flex-direction: column;
+      row-gap: 10px;
+      @include tablet {
+        flex-direction: row;
+        column-gap: 10px;
+        width: 100%;
+      }
+    }
+  }
+  &__input {
+    width: 75%;
+    font-size: inherit;
+    color: inherit;
+    background-color: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    padding: 7px;
+    margin-left: 5px;
+    &--large {
+      width: 100%;
+      margin-left: 0;
+      @include tablet {
+        width: calc(100% - 180px);
+      }
+    }
+  }
+  &__button {
+    width: 100%;
+    font-size: inherit;
+    color: $white;
+    background-color: $color-main;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    @include tablet {
+      width: 180px;
+    }
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: 40px 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1.6em;
+  color: $white;
+  background-color: $color-secondary;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &--completed {
+    color: $grey-dark;
+    background-color: $grey-light;
+  }
+
+  &--completed &__name {
+    text-decoration: line-through;
+  }
+
+  &__name {
+    width: calc(100% - 80px);
+    padding: 10px 0;
+  }
+
+  &__icon {
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .far .fa-star {
+    color: $black;
+  }
+
+  .fas .fa-star {
+    color: $grey-light;
+  }
+}
+
+.info {
+  font-size: 1.6em;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6em;
+  color: $grey-dark;
+  border-top: 1px solid $grey-light;
+  padding-top: 20px;
+  margin-top: 40px;
+  &__nav {
+    font-size: 1.2em;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 15px;
+  }
+  &__link {
+    color: $grey;
+    &:hover {
+      color: $color-main;
+    }
+  }
+}

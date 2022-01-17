@@ -16,7 +16,6 @@ function App() {
       },
     ])
   );
-
   const [term, setTerm] = useState('');
 
   useEffect(() => {

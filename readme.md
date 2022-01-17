@@ -103,8 +103,6 @@ npm start (http://localhost:3000)
 ```
 create-react-app react-starter-kit
 npm install node-sass
-```
-
-```
 npm run githubpages
+npm install uuid
 ```

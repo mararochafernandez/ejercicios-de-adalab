@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$font-main: 'Roboto', sans-serif;
+
+$coral: #ef334b;
+$blue: #008e97;
+
+$very-peri: #6667ab;
+$illuminating: #f5df4d;
+
+$color-main: $coral;
+$color-secondary: $blue;
+
+$black: #000;
+$white: #fff;
+$grey-light: #e5e5e5;
+$grey-dark: #666;
+$grey: #999;
+
+@mixin tablet {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}

@@ -1,25 +1,16 @@
 import '../styles/App.scss';
-import contacts from '../data/contacts';
-import { useEffect, useState } from 'react';
-import localStorage from '../services/localstorage';
+import contacts from '../data/contacts.json';
+import { useState } from 'react';
 
 function App() {
   /* Let's do magic! 🦄🦄🦄 */
 
-  const [contactList, setContactList] = useState(
-    localStorage.get('data', contacts)
-  );
+  const [contactList, setContactList] = useState(contacts);
   const [searchTerm, setSearchTerm] = useState('');
-  const [newContact, setNewContact] = useState({
-    name: '',
-    lastname: '',
-    phone: '',
-    email: '',
-  });
-
-  useEffect(() => {
-    localStorage.set('data', contactList);
-  }, [contactList]);
+  const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleForm = (event) => {
     event.preventDefault();
@@ -29,22 +20,37 @@ function App() {
     setSearchTerm(event.target.value);
   };
 
-  const handleNewContactForm = (event) => {
-    setNewContact({
-      ...newContact,
-      [event.currentTarget.id]: event.currentTarget.value,
-    });
+  const handleNameInput = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleLastnameInput = (event) => {
+    setLastname(event.target.value);
+  };
+
+  const handlePhoneInput = (event) => {
+    setPhone(event.target.value);
+  };
+
+  const handleEmailInput = (event) => {
+    setEmail(event.target.value);
   };
 
   const handleNewContactButton = (event) => {
     event.preventDefault();
-    setContactList([...contactList, newContact]);
-    setNewContact({
-      name: '',
-      lastname: '',
-      phone: '',
-      email: '',
-    });
+    setContactList([
+      ...contactList,
+      {
+        name: name,
+        lastname: lastname,
+        phone: phone,
+        email: email,
+      },
+    ]);
+    setName('');
+    setLastname('');
+    setPhone('');
+    setEmail('');
   };
 
   const renderContactList = () => {
@@ -119,8 +125,8 @@ function App() {
             name="name"
             id="name"
             placeholder="Nombre"
-            value={newContact.name}
-            onChange={handleNewContactForm}
+            value={name}
+            onChange={handleNameInput}
           />
           <input
             className="new-contact__input"
@@ -128,8 +134,8 @@ function App() {
             name="lastname"
             id="lastname"
             placeholder="Apellidos"
-            value={newContact.lastname}
-            onChange={handleNewContactForm}
+            value={lastname}
+            onChange={handleLastnameInput}
           />
           <input
             className="new-contact__input"
@@ -137,8 +143,8 @@ function App() {
             name="phone"
             id="phone"
             placeholder="Teléfono"
-            value={newContact.phone}
-            onChange={handleNewContactForm}
+            value={phone}
+            onChange={handlePhoneInput}
           />
           <input
             className="new-contact__input"
@@ -146,8 +152,8 @@ function App() {
             name="email"
             id="email"
             placeholder="Email"
-            value={newContact.email}
-            onChange={handleNewContactForm}
+            value={email}
+            onChange={handleEmailInput}
           />
           <input
             className="new-contact__btn"

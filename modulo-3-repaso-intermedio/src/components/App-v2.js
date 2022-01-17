@@ -1,14 +1,11 @@
 import '../styles/App.scss';
-import contacts from '../data/contacts';
-import { useEffect, useState } from 'react';
-import localStorage from '../services/localstorage';
+import contacts from '../data/contacts.json';
+import { useState } from 'react';
 
 function App() {
   /* Let's do magic! 🦄🦄🦄 */
 
-  const [contactList, setContactList] = useState(
-    localStorage.get('data', contacts)
-  );
+  const [contactList, setContactList] = useState(contacts);
   const [searchTerm, setSearchTerm] = useState('');
   const [newContact, setNewContact] = useState({
     name: '',
@@ -16,10 +13,6 @@ function App() {
     phone: '',
     email: '',
   });
-
-  useEffect(() => {
-    localStorage.set('data', contactList);
-  }, [contactList]);
 
   const handleForm = (event) => {
     event.preventDefault();

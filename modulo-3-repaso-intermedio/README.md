@@ -7,7 +7,7 @@ Ejercicio de repaso intermedio.
 ## Instrucciones
 
 - Pintar listado de contactos con React.
-- Filtrar por nombre del contacto.
+- Filtrar por nombre o apellido del contacto.
 - Añadir más contactos a la agenda.
 
 ## Bonus

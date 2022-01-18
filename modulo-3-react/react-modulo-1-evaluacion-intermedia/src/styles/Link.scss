@@ -1,0 +1,12 @@
+@import './core/variables.scss';
+
+.menu {
+  &__link {
+    color: $menu-text-color;
+    text-decoration: none;
+    padding: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

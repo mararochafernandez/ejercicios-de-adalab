@@ -13,3 +13,7 @@ Ejercicio de repaso intermedio.
 ## Bonus
 
 - Guardar datos en almacenamiento local.
+
+---
+
+Happy coding!

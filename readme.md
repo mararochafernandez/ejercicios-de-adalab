@@ -43,6 +43,8 @@ Ejercicios de los materiales del curso O
 2. Eventos y estado
 3. Formularios
 4. Arrays y objetos
+5. Fetch y local storage
+6. Componentes y props
 
 ## Atajos de teclado
 
@@ -104,5 +106,5 @@ npm start (http://localhost:3000)
 create-react-app react-starter-kit
 npm install node-sass
 npm run githubpages
-npm install uuid
+npm install node-uuid
 ```

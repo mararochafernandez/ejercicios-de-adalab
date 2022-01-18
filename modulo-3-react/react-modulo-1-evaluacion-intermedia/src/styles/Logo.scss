@@ -1,0 +1,15 @@
+@import './core/mixins.scss';
+
+.header {
+  &__logo {
+    width: 155px;
+    margin: 10px 0;
+    line-height: 0;
+    @include tablet {
+      margin: 20px 0 20px 30px;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+}

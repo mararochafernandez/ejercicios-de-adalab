@@ -1,0 +1,17 @@
+@import './core/mixins.scss';
+
+.header {
+  &__nav {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-bottom: 13px;
+  @include tablet {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}

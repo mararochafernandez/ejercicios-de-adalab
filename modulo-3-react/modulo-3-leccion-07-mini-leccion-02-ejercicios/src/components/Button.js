@@ -4,9 +4,11 @@ const Button = (props) => {
     props.handleClick();
   };
 
+  const className = props.inputClass ? `button ${props.inputClass}` : 'button';
+
   return (
     <input
-      className={`button ${props.inputClass}`}
+      className={className}
       type={props.inputType}
       value={props.inputValue}
       disabled={props.inputDisabled}

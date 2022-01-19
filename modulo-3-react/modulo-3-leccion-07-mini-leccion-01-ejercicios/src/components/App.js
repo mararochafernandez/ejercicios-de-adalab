@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import { useState } from 'react';
 import Preview from './Preview';
 import InputGroupText from './InputGroupText';
+import InputGroupSelect from './InputGroupSelect';
 
 const App = () => {
   /* Let's do magic! 🦄🦄🦄 */
@@ -24,8 +25,8 @@ const App = () => {
     setEmail(value);
   };
 
-  const handleRegion = (event) => {
-    setRegion(event.target.value);
+  const handleRegion = (value) => {
+    setRegion(value);
   };
 
   const handlePaymentType = (event) => {
@@ -92,24 +93,7 @@ const App = () => {
           />
 
           {/* region */}
-          <div className="input-group-select">
-            <label className="label-text" htmlFor="region">
-              Indica tu región:
-            </label>
-            <select
-              className="input-select"
-              name="region"
-              id="region"
-              value={region}
-              onChange={handleRegion}
-            >
-              <option>España peninsular</option>
-              <option>Islas Canarias</option>
-              <option>Islas Baleares</option>
-              <option>Ceuta</option>
-              <option>Melilla</option>
-            </select>
-          </div>
+          <InputGroupSelect region={region} handleChange={handleRegion} />
 
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>

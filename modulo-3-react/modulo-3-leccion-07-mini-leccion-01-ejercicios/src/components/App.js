@@ -5,6 +5,7 @@ import InputGroupText from './InputGroupText';
 import InputGroupSelect from './InputGroupSelect';
 import InputGroupRadio from './InputGroupRadio';
 import InputGroupCheckbox from './InputGroupCheckbox';
+import Button from './Button';
 
 const App = () => {
   /* Let's do magic! 🦄🦄🦄 */
@@ -39,7 +40,7 @@ const App = () => {
     setLegalTerms(checked);
   };
 
-  const handleResetButton = () => {
+  const handleReset = () => {
     setName('');
     setEmail('');
     setRegion('España peninsular');
@@ -47,8 +48,7 @@ const App = () => {
     setLegalTerms(false);
   };
 
-  const handleForm = (event) => {
-    event.preventDefault();
+  const handleForm = () => {
     console.log('Enviando datos al servidor...');
   };
 
@@ -71,7 +71,7 @@ const App = () => {
     // HTML ✨
 
     <div>
-      <form className="form" onSubmit={handleForm}>
+      <form className="form">
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
@@ -158,19 +158,21 @@ const App = () => {
           legalTerms={legalTerms}
         />
 
-        {/* reset */}
-        {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
-        <input
-          className="button"
-          type="submit"
-          value="Enviar"
-          disabled={isValidForm() === false}
+        {/* send */}
+        <Button
+          inputType="submit"
+          inputValue="Enviar"
+          inputDisabled={isValidForm() === false}
+          handleClick={handleForm}
         />
 
-        {/* send */}
-        <button className="button reset" onClick={handleResetButton}>
-          Limpiar el formulario
-        </button>
+        {/* reset */}
+        <Button
+          inputClass="reset"
+          inputType="reset"
+          inputValue="Limpiar el formulario"
+          handleClick={handleReset}
+        />
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 const InputGroupSelect = (props) => {
-  const handleInputChange = (event) => {
+  const handleRegion = (event) => {
     props.handleChange(event.target.value);
   };
 
@@ -19,7 +19,7 @@ const InputGroupSelect = (props) => {
         name={props.inputName}
         id={props.inputId}
         value={props.inputValue}
-        onChange={handleInputChange}
+        onChange={handleRegion}
       >
         {renderOptions()}
       </select>

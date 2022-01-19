@@ -10,7 +10,7 @@ const InputGroupRadio = (props) => {
       </label>
       <input
         type="radio"
-        name="paymentType"
+        name={props.inputName}
         id={props.inputId}
         value={props.inputValue}
         checked={props.inputChecked}

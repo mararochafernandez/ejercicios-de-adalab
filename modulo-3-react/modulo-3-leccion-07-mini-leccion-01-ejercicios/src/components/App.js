@@ -4,6 +4,7 @@ import Preview from './Preview';
 import InputGroupText from './InputGroupText';
 import InputGroupSelect from './InputGroupSelect';
 import InputGroupRadio from './InputGroupRadio';
+import InputGroupCheckbox from './InputGroupCheckbox';
 
 const App = () => {
   /* Let's do magic! 🦄🦄🦄 */
@@ -34,8 +35,8 @@ const App = () => {
     setPaymentType(value);
   };
 
-  const handleLegalTerms = (event) => {
-    setLegalTerms(event.target.checked);
+  const handleLegalTerms = (checked) => {
+    setLegalTerms(checked);
   };
 
   const handleResetButton = () => {
@@ -94,13 +95,27 @@ const App = () => {
           />
 
           {/* region */}
-          <InputGroupSelect region={region} handleChange={handleRegion} />
+          <InputGroupSelect
+            labelText="Indica tu región:"
+            inputName="region"
+            inputId="region"
+            inputValue={region}
+            handleChange={handleRegion}
+            options={[
+              'España peninsular',
+              'Islas Canarias',
+              'Islas Baleares',
+              'Ceuta',
+              'Melilla',
+            ]}
+          />
 
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
 
           <InputGroupRadio
             labelText="Tarjeta de crédito"
+            inputName="paymentType"
             inputId="creditCard"
             inputValue="creditCard"
             inputChecked={paymentType === 'creditCard'}
@@ -109,6 +124,7 @@ const App = () => {
 
           <InputGroupRadio
             labelText="Efectivo"
+            inputName="paymentType"
             inputId="cash"
             inputValue="cash"
             inputChecked={paymentType === 'cash'}
@@ -117,6 +133,7 @@ const App = () => {
 
           <InputGroupRadio
             labelText="Contra reembolso"
+            inputName="paymentType"
             inputId="cashOnDelivery"
             inputValue="cashOnDelivery"
             inputChecked={paymentType === 'cashOnDelivery'}
@@ -124,19 +141,13 @@ const App = () => {
           />
 
           {/* legal terms */}
-          <div className="input-group-checkbox">
-            <label className="label-check" htmlFor="legalTerms">
-              Debes aceptar nuestros términos legales para completar la compra:
-            </label>
-            {/* Este radio solo debe aparecer activo cuando legalTerms sea true */}
-            <input
-              type="checkbox"
-              name="legalTerms"
-              id="legalTerms"
-              checked={legalTerms}
-              onChange={handleLegalTerms}
-            />
-          </div>
+          <InputGroupCheckbox
+            labelText="Debes aceptar nuestros términos legales para completar la compra:"
+            inputName="legalTerms"
+            inputId="legalTerms"
+            inputChecked={legalTerms}
+            handleChange={handleLegalTerms}
+          />
         </div>
 
         <Preview

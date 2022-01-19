@@ -1,6 +1,7 @@
 import '../styles/App.scss';
 import { useState } from 'react';
 import Preview from './Preview';
+import InputGroupText from './InputGroupText';
 
 const App = () => {
   /* Let's do magic! 🦄🦄🦄 */
@@ -70,20 +71,14 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div>
+          <InputGroupText
+            labelText="Escribe un nombre:"
+            inputName="name"
+            inputId="name"
+            inputValue={name}
+            inputPlaceholder="María García"
+            handleChange={handleName}
+          />
 
           {/* email */}
           <div className="input-group-text">

@@ -15,8 +15,9 @@ const App = () => {
 
   // events
 
-  const handleName = (event) => {
-    setName(event.target.value);
+  const handleName = (value) => {
+    //debugger;
+    setName(value);
   };
 
   const handleEmail = (event) => {

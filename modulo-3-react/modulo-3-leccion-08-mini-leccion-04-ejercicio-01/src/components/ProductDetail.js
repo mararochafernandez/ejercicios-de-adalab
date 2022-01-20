@@ -10,7 +10,17 @@ const ProductDetail = (props) => {
   return (
     <article>
       <h2>{props.product.name}</h2>
-      <img src={props.product.imageUrl} alt={props.product.name} />
+      <img
+        src={
+          props.product.imageUrl
+            ? props.product.imageUrl.replace(
+                '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/tshirt-eshop-v1',
+                'https://raw.githubusercontent.com/mararochafernandez/ejercicios-de-adalab/master/modulo-3-react/modulo-3-leccion-08-mini-leccion-04-ejercicio-01/src'
+              )
+            : null
+        }
+        alt={props.product.name}
+      />
       <p>{props.product.description}</p>
       <p>{props.product.price} €</p>
       <ul>{props.product.sizes ? renderSizes() : null}</ul>

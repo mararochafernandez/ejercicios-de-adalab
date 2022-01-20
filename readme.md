@@ -109,5 +109,5 @@ create-react-app react-starter-kit
 npm install node-sass
 npm run githubpages
 npm install node-uuid
-npm install react-router-dom
+npm install react-router-dom@5.3.0
 ```

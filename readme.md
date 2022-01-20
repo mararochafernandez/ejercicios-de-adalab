@@ -45,6 +45,8 @@ Ejercicios de los materiales del curso O
 4. Arrays y objetos
 5. Fetch y local storage
 6. Componentes y props
+7. Lifting y children
+8. Router
 
 ## Atajos de teclado
 
@@ -107,4 +109,5 @@ create-react-app react-starter-kit
 npm install node-sass
 npm run githubpages
 npm install node-uuid
+npm install react-router-dom
 ```

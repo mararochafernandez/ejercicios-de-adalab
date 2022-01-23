@@ -19,4 +19,8 @@ const Link = (props) => {
   );
 };
 
+Link.defaultProps = {
+  openInNewTab: false,
+};
+
 export default Link;

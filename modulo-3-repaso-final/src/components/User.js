@@ -1,14 +1,18 @@
+import { Link } from 'react-router-dom';
+
 const User = (props) => {
   const getGender = () => {
     if (props.user.gender === 'female') {
-      return 'mujer';
+      return 'Mujer';
     } else if (props.user.gender === 'male') {
-      return 'hombre';
+      return 'Hombre';
+    } else {
+      return 'No binario';
     }
   };
 
   return (
-    <a href="#/user/473cad77-5d41-45ac-a925-e0dbe1d3e417">
+    <Link to={`/user/${props.user.id}`}>
       <img
         className="card__img"
         src={props.user.image}
@@ -19,7 +23,7 @@ const User = (props) => {
       <p className="card__description">
         {props.user.city} / {getGender()}
       </p>
-    </a>
+    </Link>
   );
 };
 

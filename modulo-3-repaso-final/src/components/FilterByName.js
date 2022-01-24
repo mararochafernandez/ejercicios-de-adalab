@@ -1,10 +1,11 @@
-const FilterName = (props) => {
+const FilterByName = (props) => {
   const handleInput = (event) => {
     props.handleFilter({
-      key: event.currentTarget.id,
+      key: 'name',
       value: event.currentTarget.value,
     });
   };
+
   return (
     <>
       <label className="form__label display-block" htmlFor="name">
@@ -15,11 +16,11 @@ const FilterName = (props) => {
         type="text"
         name="name"
         id="name"
-        value={props.filterName}
+        value={props.inputValue}
         onChange={handleInput}
       />
     </>
   );
 };
 
-export default FilterName;
+export default FilterByName;

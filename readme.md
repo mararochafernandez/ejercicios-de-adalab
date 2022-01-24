@@ -47,6 +47,7 @@ Ejercicios de los materiales del curso O
 6. Componentes y props
 7. Lifting y children
 8. Router
+9. Buenas prácticas
 
 ## Atajos de teclado
 
@@ -110,4 +111,5 @@ npm install node-sass
 npm run githubpages
 npm install node-uuid
 npm install react-router-dom@5.3.0
+npm install prop-types
 ```

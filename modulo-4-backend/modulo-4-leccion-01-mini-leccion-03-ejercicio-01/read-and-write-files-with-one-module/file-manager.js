@@ -11,7 +11,7 @@ const readFile = (fileName, callback) => {
 };
 
 const writeFile = (fileName, fileContent, callback) => {
-  fs.writeFile(fileName, fileContent, err => {
+  fs.writeFile(fileName, fileContent, (err) => {
     if (err) {
       console.log('Error:', err);
     } else {
@@ -22,5 +22,5 @@ const writeFile = (fileName, fileContent, callback) => {
 
 module.exports = {
   readFile,
-  writeFile
+  writeFile,
 };

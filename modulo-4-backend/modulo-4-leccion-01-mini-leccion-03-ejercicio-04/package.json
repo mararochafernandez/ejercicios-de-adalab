@@ -1,0 +1,14 @@
+{
+  "name": "modulo-4-leccion-01-mini-leccion-03-ejercicio-04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mara",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

@@ -2,9 +2,9 @@
 
 Ejercicios de los materiales del curso O
 
-**Módulo 1: HTML Y CSS**
+## Módulo 1: HTML Y CSS
 
-- MAQUETACIÓN:
+**Maquetación:**
 
 1. Intro a la web
 2. Mi primera página web
@@ -19,9 +19,9 @@ Ejercicios de los materiales del curso O
 11. Sistema de Grid
 12. Animaciones CSS
 
-**Módulo 2: PROGRAMANDO LA WEB**
+## Módulo 2: PROGRAMANDO LA WEB
 
-- JAVASCRIPT:
+**JavaScript:**
 
 1. Intro a la programación
 2. Intro a la programación 2
@@ -36,8 +36,11 @@ Ejercicios de los materiales del curso O
 11. Peticiones al servidor 2
 12. DOM avanzado
 13. Métodos funcionales de array
+14. Asincronía y temporizadores
 
-**Módulo 3: REACT**
+## Módulo 3: REACT
+
+**React:**
 
 1. Mi primera web en React
 2. Eventos y estado
@@ -48,68 +51,20 @@ Ejercicios de los materiales del curso O
 7. Lifting y children
 8. Router
 9. Buenas prácticas
+10. Testing
 
-## Atajos de teclado
+## Módulo 4: BACK END
 
-```
-Ctrl+K Ctrl+C
-Ctrl+Shift+P -> Wrap with Abbreviation
-```
+**Node JS, Express JS y SQL:**
 
-## Comandos Git
+1. Node JS
+2. Express JS I
+3. Express JS II
+4. Express JS III
+5. Bases de datos I
+6. Bases de datos II
+7. Bases de datos III
 
-```
-git status
-git pull
-git add -A
-git add nombre-archivo
-git commit -m "Message commit"
-git commit --amend
-git push
-```
+---
 
-```
-git branch nombre-rama
-git branch
-git checkout nombre-rama
-git checkout -b nombre-rama
-git push -u origin nombre-rama
-git push origin nombre-rama
-git merge nombre-rama
-```
-
-```
-git log (q)
-git revert codigo-commit
-git remote -v
-```
-
-```
-git branch -d nombre-rama
-git push origin --delete nombre-rama
-```
-
-## Comandos NPM
-
-```
-npm install
-npm start
-npm run docs
-```
-
-## Comandos React
-
-```
-sudo npm install -g create-react-app
-create-react-app nombre-proyecto
-npm start (http://localhost:3000)
-```
-
-```
-create-react-app react-starter-kit
-npm install node-sass
-npm run githubpages
-npm install node-uuid
-npm install react-router-dom@5.3.0
-npm install prop-types
-```
+_Happy coding!_

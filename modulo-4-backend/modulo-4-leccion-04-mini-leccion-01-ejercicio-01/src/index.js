@@ -1,16 +1,12 @@
-// src/index.js
-
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
-// create server
 const app = express();
 
-// set express middleware
 app.use(express.json());
 app.use(cors());
 
-// create app server
 const serverPort = 3000;
 app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
@@ -18,6 +14,8 @@ app.listen(serverPort, () => {
 
 // endpoints
 
-app.get('/test', (req, res) => {
+app.get('/users/:userId/orders/:OrderId', (req, res) => {
+  console.log(req.params.userId);
+  console.log(req.params.OrderId);
   res.json({ result: 'ok' });
 });

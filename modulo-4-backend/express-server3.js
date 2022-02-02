@@ -2,6 +2,7 @@
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 // create server
 const app = express();
@@ -20,4 +21,18 @@ app.listen(serverPort, () => {
 
 app.get('/test', (req, res) => {
   res.json({ result: 'ok' });
+});
+
+// config express static server
+const staticServerPath = './public';
+app.use(express.static(staticServerPath));
+
+// not found error
+app.get('*', (req, res) => {
+  const notFoundFileRelativePath = '../public/404-not-found.html';
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
 });

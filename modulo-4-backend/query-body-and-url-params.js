@@ -81,3 +81,20 @@ app.get('/users/:userId', (req, res) => {
 
   res.json(response);
 });
+
+/*** HEADER PARAMS ***/
+
+server.post('/user', (req, res) => {
+  console.log(req.headers);
+
+  console.log(req.headers.unparametroenlacabecera);
+  console.log(req.header('unparametroenlacabecera'));
+  console.log(req.headers['otro-parametro-de-la-cabecera']);
+  console.log(req.header('otro-parametro-de-la-cabecera'));
+
+  console.log('user-agent:', req.header('user-agent'));
+
+  const response = { result: 'User created' };
+
+  res.json(response);
+});

@@ -1,11 +1,11 @@
-// select con query.all() -> devuelve varios registros (array)
+// select -> query.all() -> devuelve varios registros (array)
 app.get('/users', (req, res) => {
   const query = db.prepare('SELECT * FROM users WHERE id >= ?');
   const users = query.all(2);
   res.json(users);
 });
 
-// select con query.get() -> devuelve un registro (objeto)
+// select -> query.get() -> devuelve un registro (objeto)
 app.get('/users', (req, res) => {
   const query = db.prepare(
     'SELECT * FROM users WHERE email = ? AND password = ?'
@@ -14,7 +14,7 @@ app.get('/users', (req, res) => {
   res.json(user);
 });
 
-// update con query.run() -> devuelve { changes: 1, lastInsertRowid: 0 }
+// update -> query.run() -> devuelve { changes: 1, lastInsertRowid: 0 }
 app.patch('/users', (req, res) => {
   const query = db.prepare(
     'UPDATE users SET email = ?, password = ? WHERE id = ?'
@@ -23,14 +23,14 @@ app.patch('/users', (req, res) => {
   res.json(result);
 });
 
-// insert into con query.run() -> devuelve { changes: 1, lastInsertRowid: 6 }
+// insert into -> query.run() -> devuelve { changes: 1, lastInsertRowid: 6 }
 app.post('/users', (req, res) => {
   const query = db.prepare('INSERT INTO users (email, password) VALUES (?, ?)');
   const result = query.run(req.body.email, req.body.password);
   res.json(result);
 });
 
-// delete from con query.run() -> devuelve { changes: 1, lastInsertRowid: 0 }
+// delete from -> query.run() -> devuelve { changes: 1, lastInsertRowid: 0 }
 app.delete('/user', (req, res) => {
   const query = db.prepare('DELETE FROM users WHERE id = ?');
   const result = query.run(req.body.id);

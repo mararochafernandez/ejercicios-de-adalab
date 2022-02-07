@@ -3,6 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const Database = require('better-sqlite3');
 
 // create server
 const app = express();
@@ -12,15 +13,26 @@ app.use(express.json());
 app.use(cors());
 
 // create app server
-const serverPort = 3000;
+const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
+});
+
+// init and config data base
+const db = new Database('./src/database.db', {
+  // comment next line to hide data base logs in console
+  verbose: console.log,
 });
 
 // endpoints
 
 app.get('/test', (req, res) => {
-  res.json({ result: 'ok' });
+  const query = db.prepare('SELECT * FROM users');
+  const users = query.all();
+  const user = query.get();
+
+  const response = { result: 'ok' };
+  res.json(response);
 });
 
 // config express static server

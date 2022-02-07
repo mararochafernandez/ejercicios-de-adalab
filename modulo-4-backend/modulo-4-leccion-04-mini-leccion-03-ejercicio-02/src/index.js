@@ -30,7 +30,7 @@ app.get('/es/film:filmId.html', (req, res) => {
 
   // query params
   const awardsYear = req.query.awardsYear;
-  console.log(awardsYear);
+  console.log('awards year', awardsYear);
 
   // response with rendered template
   if (filmData) {

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import App from '../components/App';
 import MenuItem from '../components/MenuItem';
 
 test('check if target is _blank when openInNewTab is true', () => {
